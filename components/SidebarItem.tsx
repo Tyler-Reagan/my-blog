@@ -21,9 +21,8 @@ interface SubMenuItemProps extends Omit<SidebarItemProps, 'expanded'> {
 function HoveredSubMenuItem({ icon, text, active }: SubMenuItemProps) {
   return (
     <div
-      className={`my-2 rounded-md p-2 ${
-        active ? 'bg-gray-300' : ' hover:bg-indigo-50'
-      }`}
+      className={`my-2 rounded-md p-2 ${active ? 'bg-gray-300' : ' hover:bg-indigo-50'
+        }`}
     >
       <div className="flex items-center justify-center ">
         <span className="text-primary-500 h-6 w-6 ">{icon}</span>
@@ -62,11 +61,10 @@ export default function SidebarItem({
          group relative my-1 flex w-full cursor-pointer
          items-center rounded-md px-3
          py-2 font-medium transition-colors
-         ${
-           active && !subMenu
-             ? 'text-primary-500 bg-gradient-to-tr from-indigo-200 to-indigo-100'
-             : 'text-gray-600 hover:bg-indigo-50'
-         }
+         ${active && !subMenu
+              ? 'text-primary-500 bg-gradient-to-tr from-indigo-200 to-indigo-100'
+              : 'text-gray-600 hover:bg-indigo-50'
+            }
          ${!expanded && 'hidden sm:flex'}
      `}
           onClick={() => setExpandSubMenu((curr) => expanded && !curr)}
@@ -74,9 +72,8 @@ export default function SidebarItem({
           <span className="h-6 w-6">{icon}</span>
 
           <span
-            className={`overflow-hidden text-start transition-all ${
-              expanded ? 'ml-3 w-44' : 'w-0'
-            }`}
+            className={`overflow-hidden text-start transition-all ${expanded ? 'ml-3 w-44' : 'w-0'
+              }`}
           >
             {text}
           </span>
@@ -107,12 +104,12 @@ export default function SidebarItem({
               {!subMenu
                 ? text
                 : subMenu.map((item, index) => (
-                    <HoveredSubMenuItem
-                      key={index}
-                      text={item.text}
-                      icon={item.icon}
-                    />
-                  ))}
+                  <HoveredSubMenuItem
+                    key={index}
+                    text={item.text}
+                    icon={item.icon}
+                  />
+                ))}
             </div>
           )}
         </button>

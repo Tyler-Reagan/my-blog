@@ -35,13 +35,15 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 main {
-  margin-left: 16rem; /* Adjust this to match the width of your sidebar */
+  margin-left: 16rem;
+  /* Adjust this to match the width of your sidebar */
   padding: 1rem;
   overflow: auto;
 }
