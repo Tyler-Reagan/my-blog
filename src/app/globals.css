@@ -1,10 +1,13 @@
+/* Import TailwindCSS directives */
 @import "tailwindcss";
 
+/* Define CSS Variables for background and foreground */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Add font variables for Geist font integration */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -12,6 +15,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +23,39 @@
   }
 }
 
+/* Global Body Styling */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind Base Styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  margin-left: 16rem; /* Adjust this to match the width of your sidebar */
+  padding: 1rem;
+  overflow: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 16rem; /* Adjust to your preferred sidebar width */
+}
+
+.sub-menu {
+  overflow: hidden;
+  transition: height 300ms;
 }
