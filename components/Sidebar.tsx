@@ -7,9 +7,23 @@ import {
     CogIcon,
     UserIcon,
     EllipsisVerticalIcon,
+    WrenchScrewdriverIcon,
+    CommandLineIcon,
+    CloudIcon,
+    LightBulbIcon,
+    PaintBrushIcon,
+    PuzzlePieceIcon,
+    SunIcon,
+    BeakerIcon,
+    GlobeAltIcon,
+    TvIcon,
+    BookOpenIcon,
+    CalculatorIcon,
+    LinkIcon,
   } from '@heroicons/react/24/outline';
   import { useState } from 'react';
   import SidebarItem from './SidebarItem';
+import { HomeModernIcon } from '@heroicons/react/24/solid';
   
   // This sidebar component is for both mobile and desktop
   function Sidebar({ children, expanded, setExpanded }: any) {
@@ -50,7 +64,7 @@ import {
             <ul className="flex-1 px-3">{children}</ul>
             <div className="flex border-t p-3">
               <img
-                src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true&name=Mark+Ruffalo"
+                src="https://static.wikia.nocookie.net/d3967202-01cb-4c18-ac71-ec9d6ccacc76"
                 alt=""
                 className="h-10 w-10 rounded-md"
               />
@@ -61,8 +75,8 @@ import {
             `}
               >
                 <div className="leading-4">
-                  <h4 className="font-semibold">Mark Ruffalo</h4>
-                  <span className="text-xs text-gray-600">mark@gmail.com</span>
+                  <h4 className="font-semibold">Tyler Reagan</h4>
+                  <span className="text-xs text-gray-600">tylerreagan98@gmail.com</span>
                 </div>
                 <EllipsisVerticalIcon className="h-6 w-6" />
               </div>
@@ -82,23 +96,80 @@ import {
         active: true,
       },
       {
-        icon: <UserIcon />,
+        icon: <CommandLineIcon />,
+        text: 'Developer Corner',
+        active: true,
         subMenu: [
           {
-            icon: <UserIcon />,
-            text: 'Profile',
+            icon: <BeakerIcon />,
+            text: 'Blog',
           },
           {
-            icon: <CogIcon />,
-            text: 'Settings',
+            icon: <GlobeAltIcon />, 
+            text: 'GitHub'
           },
         ],
-        text: 'Profile',
       },
       {
-        icon: <CogIcon />,
-        text: 'Settings',
+        icon: <WrenchScrewdriverIcon />,
+        text: 'Hobby Hole',
+        active: true,
+        subMenu: [
+          {
+            icon: <PaintBrushIcon />,
+            text: 'AoS & Mini Painting',
+          },
+          {
+            icon: <PuzzlePieceIcon />, 
+            text: 'Board Games'
+          },
+          {
+            icon: <SunIcon />,
+            text: 'Hiking & Climbing'
+          },
+        ],
       },
+      {
+        icon: <HomeModernIcon />,
+        text: 'Personal Life',
+        active: true,
+        subMenu: [
+          {
+            icon: <CalculatorIcon />,
+            text: 'Finance'
+          },
+        ],
+      },
+      {
+        icon: <LinkIcon />,
+        text: 'External Links',
+        active: true,
+        subMenu: [
+          {
+            icon: <TvIcon />,
+            text: 'Letterboxd',
+          },
+          {
+            icon: <BookOpenIcon />, 
+            text: 'GoodReads'
+          },
+        ],
+      },
+      // {
+      //   icon: <UserIcon />,
+      //   text: 'Profile',
+      //   active: true,
+      //   subMenu: [
+      //     {
+      //       icon: <UserIcon />,
+      //       text: 'Profile',
+      //     },
+      //     {
+      //       icon: <CogIcon />,
+      //       text: 'Settings',
+      //     },
+      //   ],
+      // },
     ];
   
     // Desktop Sidebar
