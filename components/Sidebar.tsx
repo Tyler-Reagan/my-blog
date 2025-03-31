@@ -102,6 +102,7 @@ export default function MakeSidebar() {
         {
           icon: <BeakerIcon />,
           text: 'Blog',
+          link: '/dev-corner/blog',
         },
         {
           icon: <GlobeAltIcon />,
@@ -147,10 +148,12 @@ export default function MakeSidebar() {
         {
           icon: <TvIcon />,
           text: 'Letterboxd',
+          link: 'https://letterboxd.com/Morzakin/',
         },
         {
           icon: <BookOpenIcon />,
-          text: 'GoodReads'
+          text: 'GoodReads',
+          link: 'https://www.goodreads.com/user/show/144928858-tyler-reagan',
         },
       ],
     },
